@@ -24,6 +24,8 @@ int main() {
       false;         // flag controlled while loop for obtaining user input
   char computerPick; // randomly selected computer selection for game
   char you, comp;    // for determining winner function
+  string winner = "You win!";
+  string loser = "You lose!";
 
   // Display rules of the game.
   cout << "It's time to play Rock, Paper, Scissors, Lizard, Spock!" << endl;
@@ -130,45 +132,48 @@ char ComputerSelectRPSLK()
 /*************************** function to select winner ****************/
 
 void DetermineWinner(char userPick, char computerPick) {
+  string winner = "You Win!";
+  string loser = "You lose!";
+
   if (userPick == 'S') // User picks Scissors
     if (computerPick == 'S')
       cout << "Tie!";
     else if (computerPick == 'P' || computerPick == 'L')
-      cout << "You Win!";
+      cout << winner;
     else if (computerPick == 'R' || computerPick == 'K')
-      cout << "You Lose!";
+      cout << loser;
 
   if (userPick == 'P') // User picks Paper
     if (computerPick == 'P')
       cout << "Tie!";
     else if (computerPick == 'K' || computerPick == 'R')
-      cout << "You Win!";
+      cout << winner;
     else if (computerPick == 'L' || computerPick == 'S')
-      cout << "You Lose!";
+      cout << loser;
 
   if (userPick == 'R') // User picks Rock
     if (computerPick == 'R')
       cout << "Tie!";
     else if (computerPick == 'L' || computerPick == 'S')
-      cout << "You Win!";
+      cout << winner;
     else if (computerPick == 'P' || computerPick == 'K')
-      cout << "You Lose!";
+      cout << loser;
 
   if (userPick == 'L') // User picks Lizard
     if (computerPick == 'L')
       cout << "Tie!";
     else if (computerPick == 'K' || computerPick == 'P')
-      cout << "You Win!";
+      cout << winner;
     else if (computerPick == 'S' || computerPick == 'R')
-      cout << "You Lose!";
+      cout << loser;
 
   if (userPick == 'K') // User picks Spock
     if (computerPick == 'K')
       cout << "Tie!";
     else if (computerPick == 'S' || computerPick == 'R')
-      cout << "You Win!";
+      cout << winner;
     else if (computerPick == 'P' || computerPick == 'L')
-      cout << "You Lose!";
+      cout << loser;
 }
 
-void GiveFeedback() { if }
+void GiveFeedback() {}
